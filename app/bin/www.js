@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+
 const app = require('../app');
 const debug = require('debug')('expjs:server');
 const http = require('http');
@@ -87,5 +88,6 @@ function onListening() {
     'pipe ' + addr :
     'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log(`listening port: ${_config.port}`);
+  // console.log(`${process.env.NODE_ENV}`);
+  console.log(`listening port: http://localhost:${_config.port}`);
 }
